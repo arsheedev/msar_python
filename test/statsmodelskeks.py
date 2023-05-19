@@ -1,11 +1,8 @@
 import pandas as pd
-import numpy as np
 import statsmodels.api as sm
 
 # Load the CSV file into a DataFrame
 df = pd.read_csv('dataset.csv')
-
-# Preprocess the data as necessary
 
 # Define the MSAR model
 model = sm.tsa.MarkovAutoregression(df['value'], k_regimes=2, order=1)
